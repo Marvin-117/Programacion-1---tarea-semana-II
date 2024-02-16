@@ -1,4 +1,52 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+using System;
+
+namespace Tarea
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int entero = 10;
+            decimal decimalNumero = Convert.ToDecimal(entero);
+            Console.WriteLine($"Entero a Decimal: {decimalNumero}");
+
+            decimal decimalNum = 10.5m;
+            float floatNumero = (float)decimalNum;
+            Console.WriteLine($"Decimal a Flotante: {floatNumero}");
+
+            float flotanteNum = 10.75f;
+            int intNumero = (int)flotanteNum;
+            Console.WriteLine($"Flotante a Entero: {intNumero}");
+
+
+            Console.WriteLine("-------------------------");
+
+            Console.WriteLine("Introduce un texto:");
+            string cadena = Console.ReadLine();
+            Console.WriteLine($"En mayúsculas: {cadena.ToUpper()}");
+
+          
+            Console.WriteLine($"En minúsculas: {cadena.ToLower()}");
+
+            char[] charArray = cadena.ToCharArray();
+            Array.Reverse(charArray);
+            string reversedString = new string(charArray);
+            Console.WriteLine($"Al revés: {reversedString}");
+
+           
+
+            Console.ReadLine(); 
+        }
+    }
+}
+
+
+
+
+
+
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
